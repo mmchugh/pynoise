@@ -30,7 +30,7 @@ def _get_vector(x, y, z, seed):
     )
     index ^= index >> 8  # xorshift random
 
-    return constants.vectors[index % len(constants.vector)]
+    return constants.vectors[index % len(constants.vectors)]
 
 
 def noise_vector(x, y, z, int_x, int_y, int_z, seed_offset):
