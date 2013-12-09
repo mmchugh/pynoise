@@ -20,3 +20,7 @@ out = open("perlin.png", "w")
 noise_image.save(out)
 out.close()
 ```
+
+You should get something that looks like:
+
+![Perlin sample](http://mmchugh.github.io/pynoise/perlin.png)
