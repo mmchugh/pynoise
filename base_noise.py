@@ -49,9 +49,9 @@ def noise_gradients(x, y, z, seed_offset):
     unit_y = _integer_surround(y)
     unit_z = _integer_surround(z)
 
-    x_decimal = _cubic_scurve(x % 1)
-    y_decimal = _cubic_scurve(y % 1)
-    z_decimal = _cubic_scurve(z % 1)
+    x_decimal = _cubic_scurve(x - unit_x[0])
+    y_decimal = _cubic_scurve(y - unit_y[0])
+    z_decimal = _cubic_scurve(z - unit_z[0])
 
     n000 = noise_vector(x, y, z, unit_x[0], unit_y[0], unit_z[0], seed_offset)
     n100 = noise_vector(x, y, z, unit_x[1], unit_y[0], unit_z[0], seed_offset)
